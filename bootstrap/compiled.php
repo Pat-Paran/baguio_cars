@@ -476,7 +476,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     }
     public static function getBootstrapFile()
     {
-        return '/Applications/XAMPP/xamppfiles/htdocs/baguio_cars/laravel/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
+        return '/Applications/XAMPP/xamppfiles/htdocs/baguio_cars/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
     }
     public function startExceptionHandling()
     {
