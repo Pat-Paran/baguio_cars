@@ -13,3 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 
+// Sell
+
+	Route::resource('/sell','sellController');
+	//..

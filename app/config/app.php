@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -82,6 +82,8 @@ return array(
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
+	
+
 	/*
 	|--------------------------------------------------------------------------
 	| Autoloaded Service Providers
@@ -94,7 +96,6 @@ return array(
 	*/
 
 	'providers' => array(
-
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -121,7 +122,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+		
 	),
 
 	/*
@@ -136,6 +137,7 @@ return array(
 	*/
 
 	'manifest' => storage_path().'/meta',
+
 
 	/*
 	|--------------------------------------------------------------------------
@@ -188,7 +190,6 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-
 	),
 
 );

@@ -17,7 +17,8 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		return View::make('primary.index');
+			$cars=sell::all();
+		return View::make('primary.index',['cars'=>$cars]);
 	}
 
 }

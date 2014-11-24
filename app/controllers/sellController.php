@@ -9,7 +9,8 @@ class sellController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$cars=sell::all();
+		return $cars;
 	}
 
 
@@ -31,7 +32,9 @@ class sellController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		
+
+		return ('store');
 	}
 
 

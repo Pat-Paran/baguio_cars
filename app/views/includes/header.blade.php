@@ -8,9 +8,9 @@
 		
 		<nav class="navigation">
 			<ul class="menuList">
-				<li><a href="">Home</a></li>
+				<li><a href="{{ URL::action('HomeController@index') }}">Home</a></li>
 				<li><a href="">Buy</a></li>
-				<li><a href="">Sell</a></li>
+				<li><a href="{{ URL::action('sellController@index') }}">Sell</a></li>
 				<li><a href="">Taxi</a></li>
 				<li><a class="mess" href=""></a></li>
 			</ul>
