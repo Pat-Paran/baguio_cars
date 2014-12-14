@@ -14,6 +14,6 @@
 Route::get('/', 'HomeController@index');
 
 // Sell
+Route::resource('/sell','sellController');
+Route::get('/{id}', 'HomeController@details');
 
-	Route::resource('/sell','sellController');
-	//..

@@ -20,5 +20,9 @@ class HomeController extends BaseController {
 			$cars=sell::all();
 		return View::make('primary.index',['cars'=>$cars]);
 	}
+	public function details($id){
+		$cars=sell::whereId($id)->first();
+		return View::make('primary.carDetails',['cars'=>$cars]);
+	}
 
 }

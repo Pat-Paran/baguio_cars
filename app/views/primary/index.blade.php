@@ -8,11 +8,11 @@
 		<div class="featuredCars">
 			<div class="row">
 				@foreach($cars as $cars)
-				<div class="large-4 medium-6 small-12 columns">
+				<div class="large-4 medium-6 small-12 columns rowCars end">
 					<div class="carWrap clearfix">
 						<h4>{{$cars->car_name}}</h4>
 						<h4>{{$cars->car_make}}</h4>
-						<img class="imgHome"src="src/img/slider/camry.jpg">
+						<img src="src/img/cars/{{$cars['time']}}1.jpg">
 						<ul class="labelDetails">
 							<li>Model</li>
 							<li class="transSize">Transmission</li>
@@ -24,16 +24,11 @@
 							<li>Red</li>
 						</ul>
 						<span class="price">{{$cars->car_price}}</span>
-						<a class="btnView" href="">View Details</a>
+						<a> {{link_to("/{$cars->id}",'View details', array('class'=>'btnView'))}}</a>
 					</div>
 				</div>
 				@endforeach
-				<div class="large-4 medium-6 small-12 columns">
-				is
-				</div>
-				<div class="large-4 medium-6 small-12 columns">
-				pogi
-				</div>
+				
 			</div>
 		</div>
 @stop
