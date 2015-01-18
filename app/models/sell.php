@@ -27,7 +27,7 @@ class sell extends Ardent implements UserInterface, RemindableInterface {
 
 	 public static $rules = array(
 	    'first_name'           	 => 'required|between:4,50',
-	    'email'                 => 'required|email|unique:car_sold',
+	    'email'                 => 'required|email',
 	    'password'   				=> 'required|alpha_num|between:4,8',
     	'password_confirmation' => 'same:password',
 	    'car_name'              => 'required|alpha_num',

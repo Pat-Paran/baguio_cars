@@ -6,7 +6,7 @@
 		<div class="row">
 			{{Form::open(['route'=>'sell.store','files' => true])}}
 	      	<div class="large-6 medium-6 small-6 columns">
-
+	      			<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 	      			{{Form::label('first_name','Personal Name:')}}
 	      			{{Form::text('first_name')}}
 	      			{{$errors->first('first_name','<span class="error">:message</span>')}}

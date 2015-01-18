@@ -58,42 +58,40 @@ class sellController extends \BaseController {
 		$sell->car_phone=Input::get('car_phone');
 		$sell->car_accesories=Input::get('car_accessories');
 		$sell->time=date('Y-m-d H:m') . Input::get('email');
-		if(Input::hasfile('imageOne')){
-			$imageOne=Input::file('imageOne');
+		$imageOne=Input::file('imageOne');
 			$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
 			$path = public_path('src/img/cars/' . $filename);
 			Image::make($imageOne->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
-		}
-		if(Input::hasfile('imageTwo')){
-			$imageTwo=Input::file('imageTwo');
-			$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
-			$path = public_path('src/img/cars/' . $filename);
-			Image::make($imageTwo->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
-		}
-		if(Input::hasfile('imageThree')){
-			$imageThree=Input::file('imageThree');
-			$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
-			$path = public_path('src/img/cars/' . $filename);
-			Image::make($imageOne->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
-		}
-		if(Input::hasfile('imageFour')){
-			$imageFour=Input::file('imageFour');
-			$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
-			$path = public_path('src/img/cars/' . $filename);
-			Image::make($imageFour->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
-		}
-		if(Input::hasfile('imageFive')){
-			$imageFive=Input::file('imageFive');
-			$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
-			$path = public_path('src/img/cars/' . $filename);
-			Image::make($imageFive->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
-		}
+			
+			
+				$imageTwo=Input::file('imageTwo');
+				$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
+				$path = public_path('src/img/cars/' . $filename);
+				Image::make($imageTwo->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
+			
+				$imageThree=Input::file('imageThree');
+				$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
+				$path = public_path('src/img/cars/' . $filename);
+				Image::make($imageOne->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
+			
+				$imageFour=Input::file('imageFour');
+				$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
+				$path = public_path('src/img/cars/' . $filename);
+				Image::make($imageFour->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
+			
+				$imageFive=Input::file('imageFive');
+				$filename  = date('Y-m-d H:m') . Input::get('email').'1'. '.' . 'jpg';
+				$path = public_path('src/img/cars/' . $filename);
+				Image::make($imageFive->getRealPath())->resize(468, 249)->save($path)->encode('jpg', 75);
 		
 
 		 $sell->save();
 
 
 		if ( $sell->save() ) {
+			
+			
+			
         
            return Redirect::route( 'sell.index' )->with( 'message', 'Thanks for registering!' );
           
@@ -101,7 +99,7 @@ class sellController extends \BaseController {
            return Redirect::route( 'sell.index' )->withInput()->withErrors( $sell->errors() );
 
         }
-		return Redirect::route('sell.index'); 
+		
 		
 	}
 	
@@ -152,6 +150,7 @@ class sellController extends \BaseController {
 	{
 		//
 	}
+
 
 
 }

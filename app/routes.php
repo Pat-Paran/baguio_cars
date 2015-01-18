@@ -16,4 +16,5 @@ Route::get('/', 'HomeController@index');
 // Sell
 Route::resource('/sell','sellController');
 Route::get('/{id}', 'HomeController@details');
+Route::when('*', 'csrf', array('post', 'put', 'delete'));
 
